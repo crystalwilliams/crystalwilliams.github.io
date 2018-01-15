@@ -1,41 +1,23 @@
-jQuery( document ).ready(function( $ ) {
-  // Inside of this function, $() will work as an alias for jQuery()
-  // and other libraries also using $ will not be accessible under this shortcut
-  // https://codex.wordpress.org/Function_Reference/wp_enqueue_script#jQuery_noConflict_Wrappers
+// write a script that brings the user to a menu when one of the checkboxes is tapped on a touch device
+window.addEventListener('touchstart', function onFirstTouch() {
+  window.USER_IS_TOUCHING = true;
+  window.removeEventListener('touchstart', onFirstTouch, false);
+}, false);
 
-  // Touch Device Detection
-  var isTouchDevice = 'ontouchstart' in document.documentElement;
-  if( isTouchDevice ) {
-    $('body').removeClass('no-touch');
+var x = {
+  document.getElementsByClass("time checkbox");
+  x.ontouchstart = openMenu() {
+    alert("This is my menu.");
   }
-
-// });
-//   // Touch Device Detection
-//   var isTouchDevice = "ontouchstart" in document.documentElement;
-//   if( isTouchDevice ) {
-//     document.documentElement.removeClass("no-touch");
-// }
-
-// when checkbox is tapped, open a menu:
-var calendar = document.getElementByClass("time checkbox");
-calendar.ontouchstart = timeSelectorMenu();
-function timeSelectorMenu() {
-  alert("hello world");
 }
 
+// The menu should give the user the ability to select a start time, an end time,
 
-// includes the following:
+// and when the user is done with the menu, the checkboxes in the calendar should be selected based on the user's inputs.
 
-function timeSelectorMenu() {
-  alert("hello world");
-}
+// Users should be able to repeat this process to select as many blocks of checkboxes as they want.
 
-// the ability to select a start time and an end time
 
-// based on the selections, all boxes are selected
 
-// function timeSelectorHighlight() {
 
-}
-// ability to repeat the process (loop?)
-
+// While adding this functionality, make sure to follow progressive enhancement and that none of the existing functionalities are broken.
