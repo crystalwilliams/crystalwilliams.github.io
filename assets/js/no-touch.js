@@ -1,3 +1,3 @@
-(("ontouchstart" in document.documentElement)) {
+!(("ontouchstart" in document.documentElement)) {
   document.documentElement.className += "no-touch";
 }
