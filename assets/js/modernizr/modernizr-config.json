@@ -1,0 +1,14 @@
+{
+  "minify": true,
+  "options": [
+    "hasEvent",
+    "setClasses"
+  ],
+  "feature-detects": [
+    "test/custom-elements",
+    "test/customevent",
+    "test/pointerevents",
+    "test/postmessage",
+    "test/touchevents"
+  ]
+}
